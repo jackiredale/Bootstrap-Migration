@@ -9,7 +9,6 @@ A multi-page responsive website for VeloFellow a mobile bicycle mechanic service
 
 ## Features
 - desktop , tablet and mobile views 
-- dark mode
 - contact form
 
 ## setup
@@ -24,6 +23,7 @@ open "index.html" in a web browser
 - HTML5
 - Bootstrap 4.5
 - Custom CSS
+- jQuery
 
 ## Bootstrap Components Used
 
@@ -37,5 +37,8 @@ open "index.html" in a web browser
 - About
 - Services
 - Contact
+
+## jQuery Widget Used
+- jQuery UI Datepicker
 
 Clone repo and open index.html in a browser or vistit the live site link above
