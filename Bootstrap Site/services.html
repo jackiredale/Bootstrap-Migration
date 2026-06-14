@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>VeloFellow | Services</title>
+</head>
+
+<body>
+     <!--header and navigation -->
+     <header>
+           <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+               </nav>
+               <button id="theme-toggle" class="theme-btn">🌙</button>
+    </header>
+  <!-- main content -->
+
+    <main>
+         <section id="services">
+             <h1>Our Services</h1>
+             <p>We offer a wide range of cycling services to keep your bike in top condition.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                         <h3>General Maintenance</h3>
+                         <p>Full M-Check/Safety Check inc; Gears, Brakes, Headset, Wheel True</p>
+                </div>
+                <div class="service-card">
+                        <h3>Brake Adjustments</h3>
+                        <p>Mechanical / Hydraulic, pad replacement, brake bleeding, cable replacement / adjustment</p>
+                </div>
+                <div class="service-card">
+                    <h3>Gear Tuning</h3>
+                    <p>Derailleur indexing, cable replacement and drivetrain servicing.</p>
+                </div>
+                <div class="service-card">
+                     <h3>Puncture Repair</h3>
+                    <p>Replacement butyle/latex tube, tyre boots, tubless plugs, sealent top-up</p>
+                </div>
+                <div class="service-card">
+                    <h3>Wheel Truing</h3>
+                    <p>Spoke adjustment/replacement, Disc Rotor Truing, Wheel Dishing</p>
+                </div>
+</div>
+         </section>
+    </main>
+<!--footer -->
+
+    <footer>
+        <p>&copy; 2026 VeloFellow. All rights reserved.</p>
+    </footer> 
+<script>
+    const btn = document.getElementById('theme-toggle');
+
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        document.body.classList.add('dark-mode');
+        btn.textContent = '☀️';
+    }
+
+    btn.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        const isDark = document.body.classList.contains('dark-mode');
+        btn.textContent = isDark ? '☀️' : '🌙';
+        localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
+    });
+</script>
+</body>
+</html>
