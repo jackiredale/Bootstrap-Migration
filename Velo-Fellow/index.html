@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>VeloFellow | Home</title>
+</head>
+
+<body>
+    <!--header and navigation -->
+    <header>
+           <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+               </nav>
+               <button id="theme-toggle" class="theme-btn">🌙</button>
+    </header>
+ <!-- main content -->
+    <main>
+         <section id="home">
+             <h1>Welcome to VeloFellow</h1>
+             <p>Winchester's Mobile Cycle Mechanic</p>
+                <img src="assets/images/anton-savinov-CL7shAl6888-unsplash.jpg" 
+             alt="VeloFellow Mobile Mechanic" class="hero-image light-img">
+                <img src="assets/images/anton-savinov-589WP0tHcBQ-unsplash.jpg" 
+             alt="VeloFellow Mobile Mechanic" class="hero-image dark-img">
+
+             <a href="services.html" class="btn">View Our Services</a>
+
+            </section>
+    </main>
+<!--footer -->
+    <footer>
+        <p>&copy; 2026 VeloFellow. All rights reserved.</p>
+    </footer> 
+   <script>
+    const btn = document.getElementById('theme-toggle');
+
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        document.body.classList.add('dark-mode');
+        btn.textContent = '☀️';
+    }
+
+    btn.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        const isDark = document.body.classList.contains('dark-mode');
+        btn.textContent = isDark ? '☀️' : '🌙';
+        localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
+    });
+</script>
+</body>
+</html>

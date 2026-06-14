@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>VeloFellow | About</title>
+</head>
+
+<body>
+     <!--header and navigation -->
+     <header>
+           <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+               </nav>
+               <button id="theme-toggle" class="theme-btn">🌙</button>
+    </header>
+  <!-- main content -->
+
+    <main>
+         <section id="about">
+             <h1>About VeloFellow</h1>
+             <p>Learn more about our company and what we do.</p>
+             <p>VeloFellow is a mobile bicycle mechanic service based in Winchester, Hampshire. You can tell us about you bikes issues for a free quote, once accepted we will dispatch one of our Cytech qualified mechanics to your location to complete the repair. We believe in making bicycle maintenance accessible and affordable to everyone. Get in touch to see how we can help you with your bike today.</p>
+         </section>
+    </main>
+<!--footer -->
+
+    <footer>
+        <p>&copy; 2026 VeloFellow. All rights reserved.</p>
+    </footer> 
+<script>
+    const btn = document.getElementById('theme-toggle');
+
+    if (localStorage.getItem('darkMode') === 'enabled') {
+        document.body.classList.add('dark-mode');
+        btn.textContent = '☀️';
+    }
+
+    btn.addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+        const isDark = document.body.classList.contains('dark-mode');
+        btn.textContent = isDark ? '☀️' : '🌙';
+        localStorage.setItem('darkMode', isDark ? 'enabled' : 'disabled');
+    });
+</script>
+</body>
+</html>
